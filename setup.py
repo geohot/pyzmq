@@ -980,7 +980,7 @@ dotc = lambda *path: makename(path, '.c')
 libzmq = pxd('backend', 'cython', 'libzmq')
 buffers = pxd('utils', 'buffers')
 message = pxd('backend', 'cython', 'message')
-context = pxd('backend', 'cython', 'context')
+context = pxd('backend', 'cython', '_context')
 socket = pxd('backend', 'cython', 'socket')
 utils = pxd('backend', 'cython', 'utils')
 checkrc = pxd('backend', 'cython', 'checkrc')
@@ -991,7 +991,7 @@ submodules = {
             'error':[libzmq, checkrc],
             '_poll':[libzmq, socket, context, checkrc],
             'utils':[libzmq, utils, checkrc],
-            'context':[context, libzmq, checkrc],
+            '_context':[context, libzmq, checkrc],
             'message':[libzmq, buffers, message, checkrc],
             'socket':[context, message, socket, libzmq, buffers, checkrc],
             '_device':[libzmq, socket, context, checkrc],

@@ -39,7 +39,7 @@ from buffers cimport asbuffer_r, viewfromobject_r
 from libzmq cimport *
 from message cimport Frame, copy_zmq_msg_bytes
 
-from context cimport Context
+from _context cimport Context
 
 cdef extern from "Python.h":
     ctypedef int Py_ssize_t
