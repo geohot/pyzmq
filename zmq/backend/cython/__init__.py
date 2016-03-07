@@ -3,18 +3,18 @@
 # Copyright (C) PyZMQ Developers
 # Distributed under the terms of the Lesser GNU Public License (LGPL).
 
-from . import (constants, error, message, context,
+from . import (constants, error, message, _context,
                       socket, utils, _poll, _version, _device )
 
 __all__ = []
-for submod in (constants, error, message, context,
+for submod in (constants, error, message, _context,
                socket, utils, _poll, _version, _device):
     __all__.extend(submod.__all__)
 
 from .constants import *
 from .error import *
 from .message import *
-from .context import *
+from ._context import *
 from .socket import *
 from ._poll import *
 from .utils import *
